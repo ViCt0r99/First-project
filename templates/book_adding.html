@@ -1,0 +1,92 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    <title>Book adding</title>
+{% endblock %}
+
+{% block body %}
+
+  <div class="form-wrapper">
+    <h2 class="title">Book adding</h2>
+
+    <form actions="/adding" method="POST">
+
+      <fieldset class="form-field">
+      {{ form.Title.label }}
+      {{ form.Title }}
+        {% if form.Title.errors %}
+        <ul class="errors">
+          {% for error in form.Title.errors %}
+            <li>{{ error }}</li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+      </fieldset>
+
+      <fieldset class="form-field">
+        {{ form.Author.label }}
+        {{ form.Author }}
+        {% if form.Author.errors %}
+          <ul class="errors">
+            {% for error in form.Author.errors %}
+              <li>{{ error }}</li>
+            {% endfor %}
+          </ul>
+        {% endif %}
+      </fieldset>
+
+      <fieldset class="form-field">
+        {{ form.PublishedDate.label }}
+        {{ form.PublishedDate }}
+        {% if form.PublishedDate.errors %}
+          <ul class="errors">
+            {% for error in form.PublishedDate.errors %}
+              <li>{{ error }}</li>
+            {% endfor %}
+          </ul>
+        {% endif %}
+      </fieldset>
+
+      <fieldset class="form-field">
+        {{ form.ISBN.label }}
+        {{ form.ISBN }}
+        {% if form.ISBN.errors %}
+          <ul class="errors">
+            {% for error in form.ISBN.errors %}
+              <li>{{ error }}</li>
+            {% endfor %}
+          </ul>
+        {% endif %}
+      </fieldset>
+
+      <fieldset class="form-field">
+        {{ form.Page_count.label }}
+        {{ form.Page_count }}
+        {% if form.Page_count.errors %}
+          <ul class="errors">
+            {% for error in form.Page_count.errors %}
+              <li>{{ error }}</li>
+            {% endfor %}
+          </ul>
+        {% endif %}
+      </fieldset>
+
+      <fieldset class="form-field">
+        {{ form.Language.label }}
+        {{ form.Language }}
+        {% if form.Language.errors %}
+          <ul class="errors">
+            {% for error in form.Language.errors %}
+              <li>{{ error }}</li>
+            {% endfor %}
+          </ul>
+        {% endif %}
+      </fieldset>
+
+      {{ form.submit }}
+      <a href="/">Return</a>
+
+      </form>
+  </div>
+
+{% endblock %}
