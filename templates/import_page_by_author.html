@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block head %}
+    <title>Import page by author</title>
+{% endblock %}
+
+{% block body %}
+    <div class="content">
+        <h1 style="text-align: center">You are importing new books by author</h1>
+
+        <div class="form">
+            <form actions="/imported_books" method="post">
+                <input type="text" name="author" id="author">
+                <br>
+                <input type="submit" value="Search">
+                <a href="/import">Return</a>
+            </form>
+        </div>
+    </div>
+{% endblock %}
