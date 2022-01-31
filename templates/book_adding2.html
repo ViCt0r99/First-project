@@ -1,0 +1,26 @@
+{% from "forms_helpers.html" import render_field %}
+{% extends 'base.html' %}
+
+{% block head %}
+    <title>Book adding</title>
+{% endblock %}
+
+{% block body %}
+<div class="content" style="text-align: center">
+    <h2 style="text-align: center">Book adding</h2>
+	<form method="POST" action="/adding" class="form-field">
+	   <dl>
+	    {{ form.csrf_token }}
+	    {{ render_field(form.Title) }}
+	    {{ render_field(form.Author) }}
+        {{ render_field(form.PublishedDate) }}
+        {{ render_field(form.ISBN) }}
+        {{ render_field(form.PageCount) }}
+		{{ render_field(form.Url_thumbnail) }}
+        {{ render_field(form.Language) }}
+	    <input type="submit" value="Add">
+         <a href="/">Return</a>
+	    </dl>
+	</form>
+</div>
+{% endblock %}
