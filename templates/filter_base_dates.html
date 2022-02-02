@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block head %}
+    <title>Import page by dates</title>
+{% endblock %}
+
+{% block body %}
+    <div class="content">
+        <h1 style="text-align: center">You are filtering your bookshelf by dates</h1>
+
+        <div class="form">
+            <form method="post">
+                <h4 style="text-align: center">First date</h4>
+                <input type="text" name="data1_filter" id="data1_filter">
+                <h4 style="text-align: center">Second date</h4>
+                <input type="text" name="data2_filter" id="data2_filter">
+                <br>
+                <input type="submit" value="Search">
+                <a href="/filter">Return</a>
+            </form>
+        </div>
+    </div>
+{% endblock %}

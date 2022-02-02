@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block head %}
+    <title>Import</title>
+{% endblock %}
+
+{% block body %}
+    <div class="content">
+        <h1 style="text-align: center">Filter your Book</h1>
+        <h4 style="text-align: center">Choose the way to filter your bookshelf:</h4>
+            <a href="/filter_base_author">Author</a>
+            <a href="/filter_base_title">Title</a>
+            <a href="/filter_base_language">Language</a>
+            <a href="/filter_base_dates">Published dates</a>
+            <br>
+            <a href="/">Return</a>
+    </div>
+{% endblock %}
